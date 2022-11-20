@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+:root {
+  --gray: #e8e8e8;
+  --green: #489545;
+  --white: #fff;
+}
+
+body {
+  background: var(--white);
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+    background: var(--green);
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+header h1 {
+    font-size: 2rem;
+    margin-top: -100px;
+    color: var(--white);
+}
+  
+header .config img{
+    width: 30px;
+    position: absolute;
+    left: 20px;
+    margin-top: -75px;
+}
+
+header .logout img{
+    width: 30px;
+    position: absolute;
+    right: 20px;
+    margin-top: -75px;
+}
+
+section .ftperfil{
+  padding-top: 70px;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  height: 35px;
+  margin-bottom: 20px;
+}
+
+section img{
+  border-radius: 50%;
+}
+
+section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section h1{
+  font-size: 2rem;
+  margin: 25px 0;
+}
+
+.sub{
+  border-radius: 10px;
+  border: none;
+  background-color: var(--gray);
+  margin: 30px 0;
+  font-size: 20px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+form button{
+  border-radius: 10px;
+  border: none;
+  background-color: var(--gray);
+  margin: 30px 0;
+  font-size: 20px;
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+.btnOpenModal {
+  font-size: 16px;
+  width: 175px;
+  padding: 10px;
+  margin: 5px;
+  height: 60px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--white);
+  cursor: pointer;
+}
+
+.modal-container {
+  width: 100vw;
+  position: fixed;
+  top: 30px;
+  display: none;
+  z-index: 999;
+  justify-content: center;
+}
+
+hr {
+  border: 0px;
+  border-top: 1px solid lightgray;
+}
+.modal {
+  display: inline;
+  flex-direction:column;
+  padding: 30px;
+  background-color: var(--gray);
+  border-radius: 10px;
+  width: 50%;
+}
+
+.active {
+  display: flex;
+}
+
+.active .modal {
+  animation: modal .4s;
+}
+
+@keyframes modal {
+  from {
+    opacity: 1;
+    transform: translate3d(0, -60px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+span {
+  margin: 10px auto;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.btns button {
+  font-size: medium;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cnpj,
+.nomeprop,
+.email,
+.logradouro{
+  background: var(--gray);
+  width: 350px;
+  height: 60px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  margin: 5px;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.cep, .numcasa, .fone{
+  width: 175px;
+  background: var(--gray);
+  height: 60px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  margin: 5px;
+  font-size: 16px;
+  padding: 10px;
+}
