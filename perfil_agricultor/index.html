@@ -39,15 +39,36 @@
             
                 <input type="number" id="numCasa" name="numCasa" class="numcasa" placeholder="Número"/>
             </div>
-            <div>
-                <input type="number" id="fone" name="fone" class="fone" placeholder="Fone"/>
-                <span>Horário de funcionamento <b></b></span>
+        </form>
+        <div>
+            <input type="number" id="fone" name="fone" class="fone" placeholder="Fone"/>
+            <button class="btnOpenModal" onclick="openModal()">Horário de funcionamento <b></b></button>
+        </div>
+        <div class="modal-container">
+            <div class="modal">
+              <h2> Dias e Horarios</h2>
+              <hr /><br>
+              <input type ="checkbox"  name ="Seg" id="Seg"> <label for="Seg">Seg</label><br>
+              <input type ="checkbox"  name ="Ter" id="Ter"> <label for="Ter">Ter</label><br>
+              <input type ="checkbox"  name ="Qua" id="Qua"> <label for="Qua">Qua</label><br>
+              <input type ="checkbox"  name ="Qui" id="Qui"> <label for="Qui">Qui</label><br>
+              <input type ="checkbox"  name ="Sex" id="Sex"> <label for="Sex">Sex</label><br>
+              <input type ="checkbox"  name ="Sáb" id="Sáb"> <label for="Sáb">Sáb</label><br>
+              <input type ="checkbox"  name ="Dom" id="Dom"> <label for="Dom">Dom</label><br><br>
+              <input type ="time" name ="ahora" id="ahr"> <label for="hrs">ás</label> <input type ="time" name ="phora" id="phr"><br><br>
+              <hr />
+              <div class="btns">
+                <button class="btnOK" onclick="closeModal()">Confirmar</button>
+                <button class="btnClose" onclick="closeModal()">Cancelar</button>
+              </div>
             </div>
-        
+        </div>
+        <form action="#" method="post">
             <div class="button">
                 <button type="submit">Editar perfil</button>
             </div>
-        </form>
+        </form>    
     </section>
 </body>
+<script src="agricultor.js"></script>
 </html>

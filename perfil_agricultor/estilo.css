@@ -64,12 +64,26 @@ section img{
 section{
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
 section h1{
   font-size: 2rem;
   margin: 25px 0;
+}
+
+.sub{
+  border-radius: 10px;
+  border: none;
+  background-color: var(--gray);
+  margin: 30px 0;
+  font-size: 20px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 form {
@@ -86,6 +100,83 @@ form button{
   margin: 30px 0;
   font-size: 20px;
   padding: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+.btnOpenModal {
+  font-size: 16px;
+  width: 175px;
+  padding: 10px;
+  margin: 5px;
+  height: 60px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--white);
+  cursor: pointer;
+}
+
+.modal-container {
+  width: 100vw;
+  position: fixed;
+  top: 30px;
+  display: none;
+  z-index: 999;
+  justify-content: center;
+}
+
+hr {
+  border: 0px;
+  border-top: 1px solid lightgray;
+}
+.modal {
+  display: inline;
+  flex-direction:column;
+  padding: 30px;
+  background-color: var(--gray);
+  border-radius: 10px;
+  width: 50%;
+}
+
+.active {
+  display: flex;
+}
+
+.active .modal {
+  animation: modal .4s;
+}
+
+@keyframes modal {
+  from {
+    opacity: 1;
+    transform: translate3d(0, -60px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+span {
+  margin: 10px auto;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.btns button {
+  font-size: medium;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .cnpj,
