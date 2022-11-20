@@ -25,6 +25,8 @@
                 <input type="number" id="cnpj" name="cnpj" class="cnpj" placeholder="CNPJ"/>
             </div>
             <div>
+                <input type="password" id="senha" name="senha" class="senha" placeholder="Senha"/>
+            </div>
                 <input type="text" id="nomeprop" name="nomeprop" class="nomeprop" placeholder="Nome proprietário"/>
             </div>
             <div>
@@ -64,10 +66,11 @@
             </div>
             
             <div >
-                <a type="submit" class="sub" href="../login/login.html">Concluir</a>
+                <a type="submit" class="sub" href="../login/login.html" onclick="cadastrarse()">Concluir</a>
             </div>
         
     </section>
 </body>
 <script src="cadastro.js"></script>
+<script src="../connect_db/connect_db.js"></script>
 </html>
