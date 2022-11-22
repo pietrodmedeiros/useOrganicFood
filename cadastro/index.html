@@ -1,73 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilo.css">
-    <title>Cadastro da Horta</title>
-</head>
-<body>
-    <header>
-        <div class="config"><a href=""><img src="../img/config.png" alt="Configuracao" href=""/></a></div>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="estilo.css">
+        <title>Cadastro da Horta</title>
+    </head>
+    <body>
+        <header>
+            <div class="config"><a href=""><img src="../img/config.png" alt="Configuracao" href=""/></a></div>
 
-            <div id="logo">
-                <a href="../index.html"><img src="../img/logo.png" alt="Logo" /></a>
-            </div>
-
-        <div class="logout"><a href="../login/login.html"><img src="../img/power.png" alt="Sair" href=""/></a></div>
-    </header>
-    <section>
-        
-        <h1>Preencha os Campos</h1>
-        <form action="#" method="post">
-            <div>
-                <input type="number" id="cnpj" name="cnpj" class="cnpj" placeholder="CNPJ"/>
-            </div>
-            <div>
-                <input type="text" id="nomeprop" name="nomeprop" class="nomeprop" placeholder="Nome proprietário"/>
-            </div>
-            <div>
-                <input type="email" id="email" name="email" class="email" placeholder="Email"/>
-            </div>
-            <div>
-                <input type="text" id="logradouro" name="logradouro" class="logradouro" placeholder="Logradouro"/>
-            </div>
-            <div>
-                <input type="number" id="cep" name="cep" class="cep" placeholder="CEP"/>
-            
-                <input type="number" id="numCasa" name="numCasa" class="numcasa" placeholder="Número"/>
-            </div>
-        </form>
-            <div>
-                <input type="number" id="fone" name="fone" class="fone" placeholder="Fone"/>
-                <button class="btnOpenModal" onclick="openModal()">Horário de funcionamento <b></b></button>
-            </div>
-            <div class="modal-container">
-                <div class="modal">
-                  <h2> Dias e Horarios</h2>
-                  <hr /><br>
-                  <input type ="checkbox"  name ="Seg" id="Seg"> <label for="Seg">Seg</label><br>
-                  <input type ="checkbox"  name ="Ter" id="Ter"> <label for="Ter">Ter</label><br>
-                  <input type ="checkbox"  name ="Qua" id="Qua"> <label for="Qua">Qua</label><br>
-                  <input type ="checkbox"  name ="Qui" id="Qui"> <label for="Qui">Qui</label><br>
-                  <input type ="checkbox"  name ="Sex" id="Sex"> <label for="Sex">Sex</label><br>
-                  <input type ="checkbox"  name ="Sáb" id="Sáb"> <label for="Sáb">Sáb</label><br>
-                  <input type ="checkbox"  name ="Dom" id="Dom"> <label for="Dom">Dom</label><br><br>
-                  <input type ="time" name ="ahora" id="ahr"> <label for="hrs">ás</label> <input type ="time" name ="phora" id="phr"><br><br>
-                  <hr />
-                  <div class="btns">
-                    <button class="btnOK" onclick="closeModal()">Confirmar</button>
-                    <button class="btnClose" onclick="closeModal()">Cancelar</button>
-                  </div>
+                <div id="logo">
+                    <a href="../index.html"><img src="../img/logo.png" alt="Logo" /></a>
                 </div>
-            </div>
+
+            <div class="logout"><a href="../login/login.html"><img src="../img/power.png" alt="Sair" href=""/></a></div>
+        </header>
+        <section>
             
-            <div >
-                <a type="submit" class="sub" href="../login/login.html">Concluir</a>
-            </div>
-        
-    </section>
-</body>
-<script src="cadastro.js"></script>
+            <h1>Preencha os Campos</h1>
+            <form onsubmit="salvarHorta()">
+                <div>
+                    <input type="text" id="nome" name="nomeprop" class="nomeprop" placeholder="Nome proprietário"/>
+                </div>
+                <div>
+                    <input type="password" id="senha" name="senha" class="senha" placeholder="Senha"/>
+                </div>
+                <div>
+                    <input type="email" id="email" name="email" class="email" placeholder="Email"/>
+                </div>
+                <div>
+                    <input type="text" id="logradouro" name="logradouro" class="logradouro" placeholder="Endereco"/>
+                </div>
+                <div >
+                    <input type="submit" class="sub"></a>
+                </div>
+            </form>                        
+            
+        </section>
+    </body>
+    <script src="cadastro.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../connect_db/connect_db.js"></script>
 </html>
