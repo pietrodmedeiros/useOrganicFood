@@ -2,7 +2,7 @@
 
 ![logo](https://raw.githubusercontent.com/JuliaMendes/organicFood/main/img/logo-verde.png)
 
-### Acesse o Projeto OrganicFood [clicando aqui](https://isorganicfood.netlify.app/)
+### Acesse o Projeto OrganicFood [clicando aqui](https://useorganicfood.netlify.app/)
 ------------------------------
 
 * Objetivos
