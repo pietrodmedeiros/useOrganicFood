@@ -14,7 +14,7 @@
 <br>
 
 * Vídeo
-  * Acesse o vídeo demonstração do projeto [clicando aqui](https://youtu.be/pS-Y_RTcBvU)
+  * Acesse o vídeo demonstração do projeto [clicando aqui](https://www.loom.com/share/55d8462708c844b58cc099beb62be225)
 ##### Projeto criado durante a disciplina _Projeto Integrador 2022/1 - SENAC_ 
 * Integrantes do Grupo
   * CLEYTON CARLOS DA SILVA

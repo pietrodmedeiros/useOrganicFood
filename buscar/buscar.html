@@ -9,6 +9,22 @@
         <link rel="stylesheet" href="buscar-style.css" />
     </head>
 
+    <script>
+        var nomeHorta = ''
+        var db = window.openDatabase("OrganicFood Banco", "2.0", "Mybase", 4048);
+        db.transaction(function(buscar) {
+        buscar.executeSql("select * from hortas", [], function(buscar, results){
+            for (i = 0; i < results.rows.length; i++) { 
+                nomeHorta = results.rows[i].nome;
+                
+                document.getElementById('opcoes-da-horta').innerHTML += '<div class="itens" id="itens"><div class="opcao"><div><img class="foto-da-horta" src="../img/horta1.png" alt="horta1" /></div><div><p id="nome">' + nomeHorta +'</p><p>2,5km</p> </div></div><div><img src="../img/coracao.png" alt="coracao"></div></div>'
+        } 
+      })
+    })
+
+
+    
+    </script>
     <body>
         <header>
             <div id="logo">
@@ -20,75 +36,12 @@
                 <input id="cep" type="cep" placeholder="cep" required />
                 <img src="../img/buscar.png" alt="lupa de busca" />
             </div>
+            <div id="teste">
 
-            <div class="opcoes-da-horta">
-                <div class="itens">
-                    <div class="opcao">
-                        <div>
-                            <img class="foto-da-horta" src="../img/horta1.png" alt="horta1" />
-                        </div>
-
-                        <div>
-                            <p>Orgânica do Chico</p>
-
-                            <p>2,5km</p>
-                        </div>
-                    </div>
-                    <div>
-
-                        <img src="../img/coracao.png" alt="coracao">
-
-                    </div>
-                </div>
-                <div class="opcoes-da-horta">
-                    <div class="itens">
-                        <div class="opcao">
-                            <div>
-                                <img class="foto-da-horta" src="../img/horta2.png" alt="horta2" />
-                            </div>
-
-                            <div>
-                                <p>Horta Bem Estar</p>
-                                <p>3,1km</p>
-                            </div>
-                        </div>
-                        <div>
-                            <img src="../img/coracao_verde.png" alt="coracao verde">
-                        </div>
-                    </div>
-                    <div class="opcoes-da-horta">
-                        <div class="itens">
-                            <div class="opcao">
-                                <div>
-                                    <img class="foto-da-horta" src="../img/horta3.png" alt="horta3" />
-                                </div>
-
-                                <div>
-                                    <p>Horta da Ribeira</p>
-                                    <p>3,8km</p>
-                                </div>
-                            </div>
-                            <div>
-                                <img src="../img/coracao.png" alt="coracao">
-                            </div>
-                        </div>
-                        <div class="opcoes-da-horta">
-                            <div class="itens">
-                                <div class="opcao">
-                                    <div>
-                                        <img class="foto-da-horta" src="../img/horta4.png" alt="horta3" />
-                                    </div>
-
-                                    <div>
-                                        <p>Horta Bem Estar</p>
-                                        <p>4,2km</p>
-                                    </div>
-                                </div>
-                                <div>
-                                    <img src="../img/coracao_verde.png" alt="coracao verde">
-                                </div>
-                            </div>
-                        </div>
+            </div>
+            <div class="opcoes-da-horta" id="opcoes-da-horta">
+                
+            </div>
         </main>
     </body>
     <script type="text/javascript" charset="utf-8" src="../connect_db/connect_db.js"></script>

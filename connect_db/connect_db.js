@@ -13,3 +13,9 @@ function salvarHorta() {
         armazenar.executeSql("INSERT INTO hortas(nome, senha, email, endereco) VALUES (?,?,?,?)", values );
     });
 }
+
+function buscarHorta() {
+
+
+
+}
